@@ -3,35 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fact2">
+    tools:context=".Fact3">
 
     <LinearLayout
-        android:id="@+id/layout2"
+        android:id="@+id/layout3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#009688"
+        android:background="#FFEB3B"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text='The word "queue" is the only word in the English language that is still pronounced the same way when the last four letters are removed.' />
+            android:text='"Rhythm" is the longest English word without a vowel.' />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="	Honey is the only food that does not spoil. Honey found in the tombs of Egyptian pharaohs has been tasted by archaeologists and found edible." />
+            android:text="The six official languages of the United Nations are: English, French, Arabic, Chinese, Russian and Spanish." />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Of all the words in the English language, the word 'set' has the most definitions!" />
+            android:text="Like fingerprints, everyone's tongue print is different!" />
 
         <Button
-            android:id="@+id/btnColorChange2"
+            android:id="@+id/btnColorChange3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Change color" />

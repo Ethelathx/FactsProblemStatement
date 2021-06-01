@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         al = new ArrayList<Fragment>();
         al.add(new Fact1());
         al.add(new Fact2());
+        al.add(new Fact3());
 
         adapter = new MyFragPageAdapter(fm, al);
         vPager.setAdapter(adapter);
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         btnLtr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                finish();
             }
         });
         //==================btnReadLtr==================
