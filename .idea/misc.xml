@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/fragment_fact1.xml" value="0.1381340579710145" />
         <entry key="app/src/main/res/layout/fragment_fact2.xml" value="0.1381340579710145" />
         <entry key="app/src/main/res/layout/fragment_fact3.xml" value="0.1381340579710145" />
       </map>
