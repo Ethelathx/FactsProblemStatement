@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     MyFragPageAdapter adapter;
     ViewPager vPager;
     Button btnLtr;
+    private SharedPreferences savedIndex;
     //------------------DeclareZone----------------
 
     @Override
@@ -65,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
+        Random randomPageNo = new Random();
         switch (item.getItemId()) {
             case R.id.action_next:
                 int max = vPager.getChildCount();
@@ -82,7 +86,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_random:
-
+                int randomPage = randomPageNo.nextInt(vPager.getChildCount());
+                System.out.println(randomPage);
+                vPager.setCurrentItem(randomPage,true);
                 return true;
 
             default:
@@ -97,6 +103,21 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.options, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    protected void onPause() {
+        SharedPreferences.Editor editor = savedIndex.edit();
+        editor.putInt("savedIndex",vPager.getCurrentItem());
+        editor.commit();
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        savedIndex = getSharedPreferences("savedIndex",MODE_PRIVATE);
+        vPager.setCurrentItem(savedIndex.getInt("savedIndex",0));
+        super.onResume();
     }
     //===============Inflate OptionMenu================
 } //--------Ending---------

@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".Fact3">
 
+    <ScrollView      android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:id="@+id/layout3"
         android:layout_width="match_parent"
@@ -30,10 +32,29 @@
             android:layout_height="wrap_content"
             android:text="Like fingerprints, everyone's tongue print is different!" />
 
+        <TextView
+            android:id="@+id/RSS"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RSS" />
+
+        <TextView
+            android:id="@+id/textViewRss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:text="TextView" />
+
         <Button
             android:id="@+id/btnColorChange3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Change color" />
     </LinearLayout>
+    </ScrollView>
 </FrameLayout>
